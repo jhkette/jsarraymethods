@@ -1,0 +1,13 @@
+{
+   
+    "adding": [
+      {
+        "name": "splice",
+        "shortDesc": "element/s to an array",
+        "desc": "Adds and/or removes elements from an array.",
+        "example": "arr.splice(2, 0, 'tacos');<br>console.log(arr);",
+        "output": "[5, 1, 'tacos', 8]"
+      }
+     
+    ]
+}
