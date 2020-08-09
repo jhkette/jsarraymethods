@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import { getData } from "./data/data";
+import { connect } from "react-redux";
+import { fetchPosts } from "./actions";
 
 import "./App.css";
 
 class App extends Component {
-  async componentDidMount() {
-    const x = await getData();
-    console.log(x);
+  componentDidMount() {
+    this.props.fetchPosts();
   }
 
   render() {
@@ -18,4 +19,8 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return { posts: state };
+};
+
+export default connect(mapStateToProps, { fetchPosts })(App);
