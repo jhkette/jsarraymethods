@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { getData } from "./data/data";
+
 import { connect } from "react-redux";
 import { fetchPosts } from "./actions";
 
