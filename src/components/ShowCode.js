@@ -4,12 +4,21 @@ import { fetchPosts } from "../actions";
 
 class ShowCode extends Component {
   componentDidMount() {
-    this.props.fetchPosts();
+    this.props.fetchPosts("adding", "shift");
   }
 
   render() {
-    
-    return <div>ShowCode</div>;
+    console.log(this.props.posts);
+  
+
+    return (
+      <div>
+        <p>{this.props.posts.name}</p>
+        <p>{this.props.posts.desc}</p>
+        <p>{this.props.posts.example}</p>
+        <p>{this.props.posts.output}</p>
+      </div>
+    );
   }
 }
 

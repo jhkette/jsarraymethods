@@ -7,6 +7,14 @@
         "desc": "Adds and/or removes elements from an array.",
         "example": "arr.splice(2, 0, 'tacos');<br>console.log(arr);",
         "output": "[5, 1, 'tacos', 8]"
+      },
+
+      {
+        "name": "shift",
+        "shortDesc": "the first element of the array",
+        "desc":"Removes the first element from an array and returns that element.",
+        "example": "arr.shift();<br>",
+        "output": "[1, 8]"
       }
      
     ]

@@ -1,7 +1,9 @@
 import { getData } from "../data/data";
 
 
-export const fetchPosts = () => async (dispatch) => {
+export const fetchPosts = (data, method) => async (dispatch) => {
     const response = await getData()
-    dispatch({type: "FETCH_POSTS", payload: response.data});
+    const x =response.data[data].filter(function(item){
+        return item.name == method;})      
+    dispatch({type: "FETCH_POSTS", payload: x[0]});
  };
