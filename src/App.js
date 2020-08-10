@@ -1,26 +1,20 @@
 import React, { Component } from "react";
+import ShowCode from './components/ShowCode'
 
-import { connect } from "react-redux";
-import { fetchPosts } from "./actions";
+
 
 import "./App.css";
 
 class App extends Component {
-  componentDidMount() {
-    this.props.fetchPosts();
-  }
-
+ 
   render() {
     return (
       <div className="App">
-        <h1>Hi there</h1>
+       <ShowCode />
       </div>
     );
   }
 }
 
-const mapStateToProps = (state) => {
-  return { posts: state };
-};
 
-export default connect(mapStateToProps, { fetchPosts })(App);
+export default App;
