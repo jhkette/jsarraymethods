@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import { bindActionCreators } from "redux";
+import { selectMethod } from "../actions";
+import { connect } from "react-redux";
 
 class Options extends Component {
 
@@ -6,7 +9,7 @@ class Options extends Component {
     event.preventDefault();
   }
   handleChange(event){
-      console.log(event.target.value)
+      selectMethod(event.target.value)
   }
   render() {
     return (
@@ -27,9 +30,12 @@ class Options extends Component {
 }
 
 
-// const mapDispatchToProps = (state) => {
-//     // return { posts: state };
-// };
-  
+// Anything returned from this function will end up as props
+// on the BookList container
+function mapDispatchToProps(dispatch) {
+  // Whenever selectBook is called, the result shoudl be passed
+  // to all of our reducers
+  return bindActionCreators({ selectMethod: selectMethod }, dispatch);
+}
 
-export default Options
+export default connect(mapDispatchToProps)(Options)

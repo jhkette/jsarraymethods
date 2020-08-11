@@ -8,7 +8,7 @@ export const fetchPosts = (data, method) => async (dispatch) => {
     dispatch({type: "FETCH_POSTS", payload: x[0]});
  };
 
- export const getMethod = (value, dispatch) => {
+ export const selectMethod = (value) => {
 
-    dispatch({type: "GET_METHOD", payload: value})
+    return {type: "GET_METHOD", payload: value}
  }
