@@ -27,15 +27,9 @@ class Options extends Component {
 }
 
 
-<<<<<<< HEAD
-const mapDispatchToProps = (state) => {
-    // return { posts: state };
-  };
-=======
 // const mapDispatchToProps = (state) => {
 //     // return { posts: state };
 // };
->>>>>>> reducerfix
   
 
 export default Options
