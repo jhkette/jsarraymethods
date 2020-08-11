@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default (state =[], action) => {
     switch(action.type){
         case 'FETCH_POSTS':
@@ -7,6 +8,17 @@ export default (state =[], action) => {
         default: 
         return state;
      
+=======
+import { combineReducers } from "redux";
+import MethodsReducer from "./method";
+import PostsReducers from "./posts";
+>>>>>>> reducerfix
 
-    }  
-}
+
+
+const rootReducer = combineReducers({
+    posts: PostsReducers,
+    methods: MethodsReducer
+  });
+  
+  export default rootReducer;

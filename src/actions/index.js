@@ -8,6 +8,10 @@ export const fetchPosts = (data, method) => async (dispatch) => {
     dispatch({type: "FETCH_POSTS", payload: x[0]});
  };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> reducerfix
  export const getMethod = (value, dispatch) => {
 
     dispatch({type: "GET_METHOD", payload: value})

@@ -23,7 +23,7 @@ class ShowCode extends Component {
 }
 
 const mapStateToProps = (state) => {
-  return { posts: state };
+  return { posts: state.posts };
 };
 
 export default connect(mapStateToProps, { fetchPosts })(ShowCode);
