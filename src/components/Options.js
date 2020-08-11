@@ -1,20 +1,35 @@
 import React, { Component } from "react";
 
-export default class Options extends Component {
+class Options extends Component {
+
+  handleSubmit(event) {
+    event.preventDefault();
+  }
+  handleChange(event){
+      console.log(event.target.value)
+  }
   render() {
     return (
       <div>
-        <form>
-          <label for="cars">Choose a car:</label>
-          <select id="cars" name="cars">
-            <option value="volvo">Volvo XC90</option>
-            <option value="saab">Saab 95</option>
-            <option value="mercedes">Mercedes SLK</option>
-            <option value="audi">Audi TT</option>
+        <form onSubmit={this.handleSubmit}>
+          <label>Choose a car:</label>
+          <select id="arrays" name="arrays" onChange={this.handleChange}>
+            <option value="access">Accessing an item</option>
+            <option value="iterate">Iterate </option>
+            <option value="delete">Deleting an item</option>
+            <option value="add">Adding an item</option>
           </select>
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Submit"  />
         </form>
       </div>
     );
   }
 }
+
+
+// const mapDispatchToProps = (state) => {
+//     // return { posts: state };
+// };
+  
+
+export default Options
