@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { bindActionCreators } from "redux";
-import { selectMethod } from "../actions";
+import { selectMethod, fetchPosts } from "../actions";
 import { connect } from "react-redux";
 
 class Options extends Component {
@@ -14,6 +14,7 @@ class Options extends Component {
   handleSubmit(event) {
     
     this.props.selectMethod(this.state.method)
+    this.props.fetchPosts("adding", this.props.methods);
     event.preventDefault();
     
   }
@@ -29,10 +30,10 @@ class Options extends Component {
         <form onSubmit={this.handleSubmit}>
           <label>Choose a car:</label>
           <select id="arrays" name="arrays" onChange={this.handleChange}>
-            <option value="access">Accessing an item</option>
-            <option value="iterate">Iterate </option>
-            <option value="delete">Deleting an item</option>
-            <option value="add">Adding an item</option>
+            <option value="splice">Accessing an item</option>
+            <option value="shift">Iterate </option>
+            <option value="splice">Accessing an item</option>
+            <option value="shift">Iterate </option>
           </select>
           <input type="submit" value="Submit" />
         </form>
@@ -44,6 +45,8 @@ class Options extends Component {
 function mapStateToProps() {
   return {
     method: selectMethod,
+    fetchPosts: fetchPosts
+    
   };
 }
 
