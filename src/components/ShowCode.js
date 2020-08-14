@@ -3,19 +3,13 @@ import { connect } from "react-redux";
 import { fetchPosts } from "../actions";
 
 class ShowCode extends Component {
-
-
-
-  
   componentDidMount() {
-
-    this.props.fetchPosts("adding", "shift");
+    console.log(this.props.methods)
+    this.props.fetchPosts("adding", this.props.methods);
   }
 
   render() {
-   
-    console.log(this.props)
-
+    console.log(this.props.methods)
     return (
       <div>
         <p>{this.props.posts.name}</p>
@@ -28,7 +22,8 @@ class ShowCode extends Component {
 }
 
 const mapStateToProps = (state) => {
-  return { posts: state.posts };
+  console.log(state)
+  return { posts: state.posts, methods: state.methods };
 };
 
 export default connect(mapStateToProps, { fetchPosts })(ShowCode);

@@ -7,7 +7,7 @@ class Options extends Component {
 
   constructor(props){
     super(props)
-    this.state = {method: ""}
+    this.state = {method: "iterate"}
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
   }
@@ -22,7 +22,7 @@ class Options extends Component {
     this.setState({method: event.target.value})
   }
   render() {
-    console.log(this.props.selectMethod);
+   
 
     return (
       <div>
