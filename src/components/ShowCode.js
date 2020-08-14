@@ -3,13 +3,18 @@ import { connect } from "react-redux";
 import { fetchPosts } from "../actions";
 
 class ShowCode extends Component {
+
+
+
+  
   componentDidMount() {
+
     this.props.fetchPosts("adding", "shift");
   }
 
   render() {
-    console.log(this.props.posts);
-  
+   
+    console.log(this.props)
 
     return (
       <div>

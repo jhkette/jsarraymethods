@@ -5,13 +5,23 @@ import { connect } from "react-redux";
 
 class Options extends Component {
 
+  constructor(props){
+    super(props)
+    this.state = {
+      method: ""
+    }
+  }
   handleSubmit(event) {
+    this.props.selectMethod(this.state.method)
     event.preventDefault();
   }
-  handleChange(event){
-      selectMethod(event.target.value)
+  handleChange(event) {
+
+    this.setState({method: event.target.value})
   }
   render() {
+    console.log(this.props.selectMethod);
+
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
@@ -22,13 +32,18 @@ class Options extends Component {
             <option value="delete">Deleting an item</option>
             <option value="add">Adding an item</option>
           </select>
-          <input type="submit" value="Submit"  />
+          <input type="submit" value="Submit" />
         </form>
       </div>
     );
   }
 }
 
+function mapStateToProps() {
+  return {
+    method: selectMethod,
+  };
+}
 
 // Anything returned from this function will end up as props
 // on the BookList container
@@ -38,4 +53,4 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators({ selectMethod: selectMethod }, dispatch);
 }
 
-export default connect(mapDispatchToProps)(Options)
+export default connect(mapDispatchToProps, mapStateToProps)(Options);
