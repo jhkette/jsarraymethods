@@ -7,13 +7,15 @@ class Options extends Component {
 
   constructor(props){
     super(props)
-    this.state = {
-      method: ""
-    }
+    this.state = {method: ""}
+    this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
   handleSubmit(event) {
+    
     this.props.selectMethod(this.state.method)
     event.preventDefault();
+    
   }
   handleChange(event) {
 
@@ -53,4 +55,5 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators({ selectMethod: selectMethod }, dispatch);
 }
 
-export default connect(mapDispatchToProps, mapStateToProps)(Options);
+// needs to be in this order - mapStateToProps, mapDispatchToProps
+export default connect( mapStateToProps, mapDispatchToProps)(Options);
