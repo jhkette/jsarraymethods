@@ -12,7 +12,6 @@ class Options extends Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
   handleSubmit(event) {
-    
     this.props.selectMethod(this.state.method)
     this.props.fetchPosts("adding", this.props.methods);
     event.preventDefault();  
@@ -25,12 +24,12 @@ class Options extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <label>Choose a car:</label>
+          <label>Choose a method:</label>
           <select id="arrays" name="arrays" onChange={this.handleChange}>
-            <option value="splice">Accessing an item</option>
-            <option value="shift">Iterate </option>
-            <option value="splice">Accessing an item</option>
-            <option value="shift">Iterate </option>
+            <option value="splice">Access an item in an array</option>
+            <option value="shift">Iterate over an array</option>
+            <option value="splice">Remove an item/items</option>
+            <option value="shift">Add an item/items</option>
           </select>
           <input type="submit" value="Submit" />
         </form>

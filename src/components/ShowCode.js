@@ -3,13 +3,14 @@ import { connect } from "react-redux";
 import { fetchPosts } from "../actions";
 
 class ShowCode extends Component {
+  // runs every time state changes
   componentDidUpdate() {
-    console.log(this.props.methods)
+   
     this.props.fetchPosts("adding", this.props.methods);
   }
 
   render() {
-    console.log(this.props.methods)
+    
     return (
       <div>
         <p>{this.props.posts.name}</p>
