@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { fetchPosts } from "../actions";
 
 class ShowCode extends Component {
-  componentDidMount() {
+  componentDidUpdate() {
     console.log(this.props.methods)
     this.props.fetchPosts("adding", this.props.methods);
   }
