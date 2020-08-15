@@ -7,7 +7,7 @@ class Options extends Component {
 
   constructor(props){
     super(props)
-    this.state = {method: "iterate"}
+    this.state = {method: "splice"}
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
   }
@@ -15,16 +15,13 @@ class Options extends Component {
     
     this.props.selectMethod(this.state.method)
     this.props.fetchPosts("adding", this.props.methods);
-    event.preventDefault();
-    
+    event.preventDefault();  
   }
   handleChange(event) {
 
     this.setState({method: event.target.value})
   }
   render() {
-   
-
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
