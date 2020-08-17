@@ -13,3 +13,11 @@ export const fetchPosts = (data, method) => async (dispatch) => {
  export const selectMethod = (method) => {
     return {type: "GET_METHOD", payload: method}
  }
+
+
+ export const selectAction = (action) => {
+    return {type: "GET_ACTION", payload: action}
+ }
+
+
+ export const 
