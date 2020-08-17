@@ -1,6 +1,12 @@
 import { getData } from "../data/data";
 
 
+export const fetchAllPosts = (ac) => async (dispatch) => {
+   const response = await getData()
+   const x = response[ac]
+   dispatch({type: "FETCH_ALL", payload: x[0]})
+}
+
 export const fetchPosts = (data, method) => async (dispatch) => {
     const response = await getData()
    
@@ -20,4 +26,3 @@ export const fetchPosts = (data, method) => async (dispatch) => {
  }
 
 
- export const 

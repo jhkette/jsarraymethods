@@ -1,23 +1,19 @@
 import React, { Component } from "react";
 import { bindActionCreators } from "redux";
-import { selectMethod, selectAction, fetchPosts } from "../actions";
+import { selectMethod, selectAction, fetchPosts, fetchAllPosts } from "../actions";
 import { connect } from "react-redux";
 
 class Options extends Component {
 
   constructor(props){
     super(props)
-    this.state = {method: "splice", action: ''}
+    this.state = {method: "splice", action: 'adding'}
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleType = this.handleType.bind(this)
     this.handleTypeChange = this.handleTypeChange.bind(this)
   }
-  handleType(event){
-    this.props.selectAction(this.state.action)
-    console.log(this.props.action)
-    event.preventDefault(); 
-  }
+ 
   handleSubmit(event) {
     this.props.selectMethod(this.state.method)
     this.props.fetchPosts("adding", this.props.method);
@@ -26,8 +22,15 @@ class Options extends Component {
   handleChange(event) {
     this.setState({method: event.target.value})
   }
+
+  handleType(event){
+    this.props.selectAction(this.state.action)
+    
+    event.preventDefault(); 
+  }
   handleTypeChange(event){
     this.setState({action: event.target.value})
+    console.log(this.state.action)
   }
   render() {
     return (
@@ -35,10 +38,10 @@ class Options extends Component {
        <form onSubmit={this.handleType}>
           <label>Choose a method:</label>
           <select id="arrays" name="arrays" onChange={this.handleTypeChange}>
-            <option value="splice">Add</option>
-            <option value="shift">Delete</option>
-            <option value="splice">Remove an item/items</option>
-            <option value="shift">Add an item/items</option>
+            <option value="adding">Add</option>
+            <option value="adding">Delete</option>
+            <option value="adding">Remove an item/items</option>
+            <option value="adding">Add an item/items</option>
           </select>
           <input type="submit" value="Submit" />
         </form> 
@@ -46,9 +49,9 @@ class Options extends Component {
           <label>Choose a method:</label>
           <select id="arrays" name="arrays" onChange={this.handleChange}>
             <option value="splice">Access an item in an array</option>
-            <option value="shift">Iterate over an array</option>
-            <option value="splice">Remove an item/items</option>
-            <option value="shift">Add an item/items</option>
+            <option value="unshift">Iterate over an array</option>
+            <option value="push">Remove an item/items</option>
+            <option value="concat">Add an item/items</option>
           </select>
           <input type="submit" value="Submit" />
         </form>
