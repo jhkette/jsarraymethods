@@ -4,9 +4,10 @@ import { fetchPosts } from "../actions";
 
 class ShowCode extends Component {
   // runs every time state changes
-  componentDidUpdate() {
-   
+  componentDidUpdate(prevProps) {
+   if(prevProps.methods !== this.props.methods){
     this.props.fetchPosts("adding", this.props.methods);
+   }
   }
 
   render() {
