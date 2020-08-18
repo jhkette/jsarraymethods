@@ -9,6 +9,7 @@ export const fetchAllPosts = (ac) => async (dispatch) => {
 export const fetchPosts = (data, method) => async (dispatch) => {
   const response = await getData();
 
+
   const x = response.data[data].filter(function (item) {
     return item.name === method;
   });
@@ -19,6 +20,6 @@ export const selectMethod = (method) => {
   return { type: "GET_METHOD", payload: method };
 };
 
-export const selectAction = (action) => {
-  return { type: "GET_ACTION", payload: action };
+export const selectOperation = (action) => {
+  return { type: "GET_OPERATION", payload: action };
 };

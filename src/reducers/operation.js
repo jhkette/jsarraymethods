@@ -1,8 +1,8 @@
 export default (state = null, action) => {
     switch(action.type){
-       
-       case "GET_METHOD":
-           return action.payload;
+        case "GET_OPERATION":
+            return action.payload;
+      
         default: 
         return state;
 

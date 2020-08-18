@@ -6,7 +6,8 @@ class ShowCode extends Component {
   // runs every time state changes
   componentDidUpdate(prevProps) {
    if(prevProps.methods !== this.props.methods){
-    this.props.fetchPosts("adding", this.props.methods);
+    this.props.fetchPosts('adding', this.props.methods);
+    console.log('hello')
    }
   }
 
@@ -25,7 +26,7 @@ class ShowCode extends Component {
 
 const mapStateToProps = (state) => {
   console.log(state)
-  return { posts: state.posts, methods: state.methods };
+  return { posts: state.posts, methods: state.methods, actions: state.actions };
 };
 
 export default connect(mapStateToProps, { fetchPosts })(ShowCode);

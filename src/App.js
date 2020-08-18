@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ShowCode from './components/ShowCode'
 import Options from './components/Options'
+import Actions from './components/Actions'
 import "./App.css";
 
 class App extends Component {
@@ -9,7 +10,9 @@ class App extends Component {
     return (
       <div className="App">
        <ShowCode />
+       <Actions />
        <Options />
+       
       </div>
     )
   }
