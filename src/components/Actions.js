@@ -10,14 +10,12 @@ class Actions extends Component {
     this.handleTypeChange = this.handleTypeChange.bind(this);
     this.handleType = this.handleType.bind(this);
   }
-
   handleType(event) {
     event.preventDefault();
   }
   handleTypeChange(event) {
     this.setState({ operation: event.target.value });
     this.props.selectOperation(this.state.operation);
-    
     this.props.fetchAllPosts(this.state.operation);
   }
   render() {
