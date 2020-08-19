@@ -7,7 +7,7 @@ class ShowCode extends Component {
   componentDidUpdate(prevProps) {
    if(prevProps.methods !== this.props.methods){
     this.props.fetchPosts(this.props.operation, this.props.methods);
-    console.log('hello')
+    
    }
   }
 
@@ -19,8 +19,7 @@ class ShowCode extends Component {
         <p>{this.props.posts.desc}</p>
         <p>{this.props.posts.example}</p>
         <p>{this.props.posts.output}</p>
-      </div> ): ('')
-      
+      </div> ): ('')   
     );
   }
 }

@@ -17,6 +17,7 @@ class Actions extends Component {
   handleTypeChange(event) {
     this.setState({ operation: event.target.value });
     this.props.selectOperation(this.state.operation);
+    
     this.props.fetchAllPosts(this.state.operation);
   }
   render() {

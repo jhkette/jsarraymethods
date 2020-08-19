@@ -47,7 +47,6 @@ class Options extends Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log(state);
   return {
     posts: state.posts,
     methods: state.methods,

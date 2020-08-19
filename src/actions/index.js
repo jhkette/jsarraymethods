@@ -8,7 +8,6 @@ export const fetchAllPosts = (ac) => async (dispatch) => {
 
 export const fetchPosts = (data, method) => async (dispatch) => {
   const response = await getData();
-
   const x = response.data[data].filter(function (item) {
     return item.name === method;
   });
