@@ -15,16 +15,14 @@ class Actions extends Component {
     event.preventDefault();
   }
   handleTypeChange(event) {
-  
     this.setState({ operation: event.target.value });
     this.props.selectOperation(this.state.operation);
-    const x = this.props.fetchAllPosts('adding')
- 
+    this.props.fetchAllPosts(this.state.operation);
   }
   render() {
     return (
       <div>
-        <form>
+        <form onSubmit={this.handleType}>
           <label>Choose a method:</label>
           <select id="arrays" name="arrays" onChange={this.handleTypeChange}>
             <option value="adding">Add</option>
@@ -41,7 +39,7 @@ class Actions extends Component {
 
 function mapStateToProps() {
   return {
-     selectOperation,
+    selectOperation,
   };
 }
 

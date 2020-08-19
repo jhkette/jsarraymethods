@@ -14,7 +14,6 @@ class Options extends Component {
 
   handleSubmit(event) {
     this.props.selectMethod(this.state.method);
-   
     event.preventDefault();
   }
   handleChange(event) {
@@ -30,6 +29,7 @@ class Options extends Component {
         {x}
       </select>
     );
+    
     return (
       <div>
         {this.props.operation ? (
