@@ -25,12 +25,12 @@ class Actions extends Component {
         <form onSubmit={this.handleType}>
           <label>Choose a method:</label>
           <select id="arrays" name="arrays" onChange={this.handleTypeChange}>
+            <option value="">...</option>
             <option value="adding">Add</option>
             <option value="adding">Delete</option>
             <option value="adding">Remove an item/items</option>
             <option value="adding">Add an item/items</option>
           </select>
-          <input type="submit" value="Submit1" />
         </form>
       </div>
     );

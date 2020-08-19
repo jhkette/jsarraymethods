@@ -3,3 +3,9 @@
     width: 80%;
     margin: auto;
 }
+
+.show-code {
+    border: 3px solid #850707;
+    font-family: 'Source Code Pro', monospace;
+
+}

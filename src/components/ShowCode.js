@@ -14,12 +14,14 @@ class ShowCode extends Component {
   render() {
     
     return (
-      <div>
+      this.props.methods ? (
+      <div className="show-code">
         <p>{this.props.posts.name}</p>
         <p>{this.props.posts.desc}</p>
         <p>{this.props.posts.example}</p>
         <p>{this.props.posts.output}</p>
-      </div>
+      </div> ): ('')
+      
     );
   }
 }
