@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import { selectMethod, selectOperation, fetchPosts } from "../actions";
 import { connect } from "react-redux";
-import allposts from "../reducers/allposts";
+
 
 class Options extends Component {
   constructor(props) {
@@ -14,7 +14,7 @@ class Options extends Component {
 
   handleSubmit(event) {
     this.props.selectMethod(this.state.method);
-    // this.props.fetchPosts(this.props.action, this.props.method);
+   
     event.preventDefault();
   }
   handleChange(event) {

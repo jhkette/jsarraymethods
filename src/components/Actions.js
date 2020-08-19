@@ -19,7 +19,7 @@ class Actions extends Component {
     this.setState({ operation: event.target.value });
     this.props.selectOperation(this.state.operation);
     const x = this.props.fetchAllPosts('adding')
-    console.log(x, 'allposts')
+ 
   }
   render() {
     return (
