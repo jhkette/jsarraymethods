@@ -4,6 +4,9 @@
     margin: auto;
 }
 
+.App h1 {
+    font-family: 'Source San Pro', sans-serif;
+}
 .show-code {
     border: 3px solid #850707;
     font-family: 'Source Code Pro', monospace;
