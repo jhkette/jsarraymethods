@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { bindActionCreators } from "redux";
-import {selectMethod,selectOperation,fetchPosts,fetchAllPosts} from "../actions";
+import {selectMethod,selectOperation,fetchPosts,} from "../actions";
 import { connect } from "react-redux";
+import allposts from "../reducers/allposts";
 
 class Options extends Component {
   constructor(props) {
@@ -23,31 +24,35 @@ class Options extends Component {
 
  
   render() {
+    
+    const x =  this.props.allposts.map((post) => {
+      return  <option value={post.name}>{post.shortDesc}</option>
+    })
+    const z= <select id="arrays" name="arrays" onChange={this.handleChange}>{x}</select>
     return (
+     
       <div>
-        
-        <form onSubmit={this.handleSubmit}>
-          <label>Choose a method:</label>
-          <select id="arrays" name="arrays" onChange={this.handleChange}>
-            <option value="splice">Access an item in an array</option>
-            <option value="unshift">Iterate over an array</option>
-            <option value="push">Remove an item/items</option>
-            <option value="concat">Add an item/items</option>
-          </select>
-          <input type="submit" value="Submit" />
-        </form>
+       
+      
+      {this.props.operation ?
+      
+      <form onSubmit={this.handleSubmit}>
+        <label>Choose a method:</label>
+        {z}
+        <input type="submit" value="Submit" />
+      </form>
+      : ''
+      }
       </div>
+      
     );
   }
 }
 
-function mapStateToProps() {
-  return {
-    method: selectMethod,
-    fetchPosts: fetchPosts,
-    action: selectOperation,
-  };
-}
+const mapStateToProps = (state) => {
+  console.log(state)
+  return { posts: state.posts, methods: state.methods, operation: state.operation, allposts: state.allposts };
+};
 
 // Anything returned from this function will end up as props
 // on the BookList container

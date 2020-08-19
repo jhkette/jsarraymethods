@@ -26,7 +26,7 @@ class ShowCode extends Component {
 
 const mapStateToProps = (state) => {
   console.log(state)
-  return { posts: state.posts, methods: state.methods, actions: state.actions };
+  return { posts: state.posts, methods: state.methods, operation: state.operation };
 };
 
 export default connect(mapStateToProps, { fetchPosts })(ShowCode);
