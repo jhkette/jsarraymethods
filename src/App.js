@@ -9,9 +9,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-       <ShowCode />
+      
        <Actions />
        <Options />
+       <ShowCode />
        
       </div>
     )
