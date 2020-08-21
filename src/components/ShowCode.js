@@ -7,7 +7,6 @@ class ShowCode extends Component {
   componentDidUpdate(prevProps) {
    if(prevProps.methods !== this.props.methods){
     this.props.fetchPosts(this.props.operation, this.props.methods);
-    
    }
   }
 

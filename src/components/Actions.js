@@ -20,10 +20,11 @@ class Actions extends Component {
   }
   render() {
     return (
-      <div>
+      <div class="select">
+  
         <form onSubmit={this.handleType}>
           <label>Choose a method:</label>
-          <select id="arrays" name="arrays" onChange={this.handleTypeChange}>
+          <select id="slct" name="arrays" onChange={this.handleTypeChange}>
             <option value="">...</option>
             <option value="adding">Add</option>
             <option value="adding">Delete</option>

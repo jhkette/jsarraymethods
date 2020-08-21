@@ -13,11 +13,11 @@ class Options extends Component {
   }
 
   handleSubmit(event) {
-    this.props.selectMethod(this.state.method);
     event.preventDefault();
   }
   handleChange(event) {
     this.setState({ method: event.target.value });
+    this.props.selectMethod(this.state.method);
   }
 
   render() {
@@ -25,7 +25,7 @@ class Options extends Component {
       return <option value={post.name}>{post.shortDesc}</option>;
     });
     const z = (
-      <select id="arrays" name="arrays" onChange={this.handleChange}>
+      <select id="slct" name="arrays" onChange={this.handleChange}>
         {x}
       </select>
     );
@@ -33,11 +33,13 @@ class Options extends Component {
     return (
       <div>
         {this.props.operation ? (
+          <div class="select">
           <form onSubmit={this.handleSubmit}>
             <label>Choose a method:</label>
             {z}
             <input type="submit" value="Submit" />
           </form>
+          </div>
         ) : (
           ""
         )}
