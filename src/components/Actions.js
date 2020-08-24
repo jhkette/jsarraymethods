@@ -15,16 +15,16 @@ class Actions extends Component {
   }
   handleTypeChange(event) {
     this.setState({ operation: event.target.value });
-    this.props.selectOperation(this.state.operation);
-    this.props.fetchAllPosts(this.state.operation);
+    this.props.selectOperation(event.target.value);
+    this.props.fetchAllPosts(event.target.value);
   }
   render() {
     return (
-      <div class="select">
+      <div className="select action">
   
         <form onSubmit={this.handleType}>
           <label>Choose a method:</label>
-          <select id="slct" name="arrays" onChange={this.handleTypeChange}>
+          <select className="actions" name="arrays" onChange={this.handleTypeChange}>
             <option value="">...</option>
             <option value="adding">Add</option>
             <option value="adding">Delete</option>

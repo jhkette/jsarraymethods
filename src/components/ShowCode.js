@@ -6,13 +6,14 @@ class ShowCode extends Component {
   // runs every time state changes
   componentDidUpdate(prevProps) {
    if(prevProps.methods !== this.props.methods){
+     console.log(this.props.operation, this.props.methods)
     this.props.fetchPosts(this.props.operation, this.props.methods);
    }
   }
 
   render() {
     return (
-      this.props.methods ? (
+      this.props.methods && this.props.operation ? (
       <div className="show-code">
         <p>{this.props.posts.name}</p>
         <p>{this.props.posts.desc}</p>

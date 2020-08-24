@@ -21,9 +21,12 @@ class Options extends Component {
   }
 
   render() {
-    const x = this.props.allposts.map((post) => {
+    let x;
+    if(this.props.allposts){
+     x = this.props.allposts.map((post) => {
       return <option value={post.name}>{post.shortDesc}</option>;
     });
+  } else x =''
     const z = (
       <select id="slct" name="arrays" onChange={this.handleChange}>
         {x}
@@ -33,7 +36,7 @@ class Options extends Component {
     return (
       <div>
         {this.props.operation ? (
-          <div class="select">
+          <div className="select">
           <form onSubmit={this.handleSubmit}>
             <label>Choose a method:</label>
             {z}

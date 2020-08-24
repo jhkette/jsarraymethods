@@ -1,9 +1,13 @@
 import { getData } from "../data/data";
 
 export const fetchAllPosts = (ac) => async (dispatch) => {
+  if(ac != ''){
   const response = await getData();
   const x = response;
   dispatch({ type: "FETCH_ALL", payload: x.data[ac] });
+  }else{
+    dispatch({ type: "FETCH_ALL", payload: null });
+  }
 };
 
 export const fetchPosts = (data, method) => async (dispatch) => {

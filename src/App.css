@@ -42,12 +42,16 @@ select {
     border-radius: .25em;
     margin: 2em 0;
   }
+  .select.action {
+    width: 21em;
+  }
   select {
     flex: 1;
     padding: 0 1em;
     color: #fff;
     cursor: pointer;
   }
+
   /* Arrow */
   .select::after {
     content: '\25BC';
