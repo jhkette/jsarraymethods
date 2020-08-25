@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import Typical from 'react-typical'
 import { fetchPosts } from "../actions";
 
 class ShowCode extends Component {
@@ -12,13 +13,20 @@ class ShowCode extends Component {
   }
 
   render() {
+    let arr = []
+    if (this.props.methods && this.props.operation){
+      arr.push(this.props.posts.desc)
+    }
+    
     return (
       this.props.methods && this.props.operation ? (
       <div className="show-code">
         <p>{this.props.posts.name}</p>
         <p>{this.props.posts.desc}</p>
         <p>{this.props.posts.example}</p>
-        <p>{this.props.posts.output}</p>
+        {this.props.posts.desc ?
+        <Typical steps={arr}  wrapper="p" /> : ''
+        }
       </div> ): ('')   
     );
   }

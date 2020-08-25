@@ -38,7 +38,7 @@ class Options extends Component {
         {this.props.operation ? (
           <div className="select-dropdown method">
           <form onSubmit={this.handleSubmit}>
-            <label>Choose a method:</label>
+            <label>Do you need to?...</label>
             {z}
            
           </form>

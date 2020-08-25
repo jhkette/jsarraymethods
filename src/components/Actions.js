@@ -23,7 +23,7 @@ class Actions extends Component {
       <div className="select-dropdown action">
   
         <form onSubmit={this.handleType}>
-          <label>Choose a method:</label>
+          <label>What do you want to do?</label>
           <select className="actions" name="arrays" onChange={this.handleTypeChange}>
             <option value="">...</option>
             <option value="adding">Add</option>
