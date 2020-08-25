@@ -26,10 +26,13 @@ class Actions extends Component {
           <label>What do you want to do?</label>
           <select className="actions" name="arrays" onChange={this.handleTypeChange}>
             <option value="">...</option>
-            <option value="adding">Add</option>
-            <option value="adding">Delete</option>
-            <option value="adding">Remove an item/items</option>
+            <option value="adding">Iterate over an array</option>
+            <option value="adding">Find an item in an array</option>
+            <option value="adding">Merge an array</option>
+            <option value="adding">Access an array item/items</option>
             <option value="adding">Add an item/items</option>
+            <option value="adding">Delete an item/items</option>
+            <option value="adding">Other</option>
           </select>
         </form>
       </div>
