@@ -22,7 +22,16 @@
   border-radius: 2px;
   margin: 2rem 0;
   display: block;
+  padding: 0 1em;
+  cursor: pointer;
 }
+.select-dropdown.action {
+  width: 20.5em;
+ }
+
+ .select-dropdown.method {
+  width: 29em;
+ }
 .select-dropdown select {
   font-family: "helvetica neue", helvetica;
   font-size: 1rem;
@@ -34,6 +43,7 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  cursor: pointer;
 }
 .select-dropdown select:active, .select-dropdown select:focus {
   outline: none;
@@ -50,4 +60,5 @@
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 5px solid #aaa;
+  cursor: pointer;
 }

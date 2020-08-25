@@ -20,7 +20,7 @@ class Actions extends Component {
   }
   render() {
     return (
-      <div className="select-dropdown">
+      <div className="select-dropdown action">
   
         <form onSubmit={this.handleType}>
           <label>Choose a method:</label>
