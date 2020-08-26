@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { bindActionCreators } from "redux";
-import { selectMethod, selectOperation, fetchPosts } from "../actions";
+import { selectMethod, selectOperation} from "../actions";
 import { connect } from "react-redux";
 
 

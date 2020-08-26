@@ -9,9 +9,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Array Method explorer</h1>
-        <p>Array methods explorer. Somewhat inspired by another site made in Vue.
-        
-        </p>
+        <p>Array methods explorer. Somewhat inspired by another site made in Vue.</p>
         <Actions />
         <Options />
         <ShowCode />
