@@ -20,7 +20,7 @@ class Info extends Component {
     return this.props.posts.desc &&
       this.props.posts.name ? (
       <div className="info">
-        <h2>{this.jsUcfirst(this.props.posts.name)} hello</h2>
+        <h2>{this.jsUcfirst(this.props.posts.name)}</h2>
         <p>{this.props.posts.desc}</p>
       </div>
     ) : (
