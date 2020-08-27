@@ -9,10 +9,18 @@ class Info extends Component {
       this.props.fetchPosts(this.props.operation, this.props.methods);
     }
   }
+
+  jsUcfirst = (str) => {
+    return (
+      str.charAt(0).toUpperCase() +
+      str.slice(1)
+    );
+  };
   render() {
-    return this.props.methods && this.props.operation ? (
+    return this.props.posts.desc &&
+      this.props.posts.name ? (
       <div className="info">
-        <h2>{this.props.posts.name}</h2>
+        <h2>{this.jsUcfirst(this.props.posts.name)} hello</h2>
         <p>{this.props.posts.desc}</p>
       </div>
     ) : (

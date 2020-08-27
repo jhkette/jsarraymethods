@@ -19,14 +19,22 @@ class ShowCode extends Component {
     }
     
     return (
-      this.props.methods && this.props.operation ? (
+      this.props.posts.desc &&
+      this.props.posts.name ? (
+      <div>
       <div className="show-code">
        
         <p>{this.props.posts.example}</p>
+      </div>
+      <div className="show-code">
+       
         {this.props.posts.desc ?
         <Typical steps={arr}  wrapper="p" /> : ''
         }
-      </div> ): ('')   
+      </div> 
+      </div>
+      ): ('')  
+       
     );
   }
 }

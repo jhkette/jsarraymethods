@@ -15,9 +15,10 @@ class App extends Component {
         
         <Options />
         <div className="results-container">
+        <Info />
         <ShowCode />
         
-        <Info />
+       
         </div>
       </div>
     );
