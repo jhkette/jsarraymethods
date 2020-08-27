@@ -15,14 +15,13 @@ class ShowCode extends Component {
   render() {
     let arr = []
     if (this.props.methods && this.props.operation){
-      arr.push(this.props.posts.desc)
+      arr.push(this.props.posts.output)
     }
     
     return (
       this.props.methods && this.props.operation ? (
       <div className="show-code">
-        <p>{this.props.posts.name}</p>
-        <p>{this.props.posts.desc}</p>
+       
         <p>{this.props.posts.example}</p>
         {this.props.posts.desc ?
         <Typical steps={arr}  wrapper="p" /> : ''
