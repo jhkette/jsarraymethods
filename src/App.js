@@ -12,20 +12,20 @@ class App extends Component {
       <div className="container">
         <TopBar />
         <div className="App">
-        <h1>Array Method explorer</h1>
-        <p>Array methods explorer. Somewhat inspired by another site made in Vue.</p>
-        <Actions />
-        
-        <Options />
-        <div className="results-container">
-        <Info />
-        <ShowCode />
-        
+          <h1>Array Method explorer</h1>
+          <p>
+            Array methods explorer. Somewhat inspired by another site made in
+            Vue.
+          </p>
+          <Actions />
+
+          <Options />
+          <div className="results-container">
+            <Info />
+            <ShowCode />
+          </div>
         </div>
-        </div>
-        </div>
-        
-      
+      </div>
     );
   }
 }

@@ -4,7 +4,7 @@ import Github from '../images/github.png'
  function Topbar() {
   return (
     <div className="topbar">
-    <img src={Github} alt="Logo" />
+    <a href="#"><img src={Github} alt="Logo" /></a>
     </div>
   )
 }

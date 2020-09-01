@@ -7,7 +7,7 @@ import { connect } from "react-redux";
 class Options extends Component {
   constructor(props) {
     super(props);
-    this.state = { method: "splice" };
+    
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -16,8 +16,8 @@ class Options extends Component {
     event.preventDefault();
   }
   handleChange(event) {
-    this.setState({ method: event.target.value });
-    this.props.selectMethod(this.state.method);
+    
+    this.props.selectMethod(event.target.value );
   }
 
   render() {

@@ -3,8 +3,8 @@
     "adding": [
       {
         "name": "splice",
-        "shortDesc": "element/s to an array",
-        "desc": "Adds and/or removes elements from an array.",
+        "shortDesc": " add element/s to an array",
+        "desc": "The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.",
         "example": "arr.splice(2, 0, 'tacos');<br>console.log(arr);",
         "output": "[5, 1, 'tacos', 8]"
       },
@@ -12,8 +12,8 @@
       {
         "name": "unshift",
         "shortDesc": "add elements to the beginning of an array",
-        "desc":"Removes the first element from an array and returns that element.",
-        "example": "arr.shift();<br>",
+        "desc":"The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.",
+        "example": "arr.unshift();<br>",
         "output": "[1, 8]"
       }
       ,
@@ -21,14 +21,14 @@
       {
         "name": "push",
         "shortDesc": "add elements to the end of an array",
-        "desc":"Removes the first element from an array and returns that element.",
-        "example": "arr.shift();<br>",
+        "desc":"The push() method adds one or more elements to the end of an array and returns the new length of the array..",
+        "example": "arr.push();<br>",
         "output": "[1, 8]"
       },
       {
         "name": "concat",
-        "shortDesc": "Add an array to another array",
-        "desc":"Returns a new array comprised of this array joined with other array(s) and/or value(s).",
+        "shortDesc": "add an array to another array",
+        "desc":"The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.",
         "example": "arr.concat();<br>",
         "output": "[1, 8]"
       }

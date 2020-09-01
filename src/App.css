@@ -1,25 +1,28 @@
 body {
   font-size: 16px;
-  background-color: #f7f7f7
+  background-color: #f9f9f9;
 }
 .container {
   width: 100%;
 }
 .topbar{
   width: 100%;
-  height: 3.8rem;
-  background-color: #eae8d0;
-  display: flex;
-  justify-content:  flex-end;
-  align-items: center;
-  border-bottom: 1px solid #cfc44b;
+height: 2.8rem;
+background-color: #f9f8ef;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+border-bottom: 1px solid #c8c38f42;
+
 }
 
 .topbar img {
-  height: 2rem;
+  height: 1.8rem;
+  
+}
+.topbar  a {
   padding-right: 10%;
 }
-
 .App {
   width: 80%;
   margin:  2rem auto;
@@ -31,8 +34,8 @@ body {
 
 
 .show-code {
-  border: 2px solid #1a1a1a;
-  background-color: #ff2a7f7c;
+  border: 1px solid #b1b1b1b7;
+  background-color: #fa7eb07c;
   font-size: 1rem;
   color: #222222;
   font-weight: 500;
