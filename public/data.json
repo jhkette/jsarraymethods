@@ -34,5 +34,29 @@
       }
      
      
+    ],
+    "deleting": [
+      {
+        "name": "pop",
+        "shortDesc": "delete the last item",
+        "desc":"The pop() method removes the last element from an array and returns that element. This method changes the length of the array.",
+        "example": "arr.pop();<br>",
+        "output": "[1, 8]"
+      },
+      {
+        "name": "slice",
+        "shortDesc": "remove several items",
+        "desc":"The slice() method returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included) where start and end represent the index of items in that array.",
+        "example": "arr.slice();<br>",
+        "output": "[1, 8]"
+      },
+      {
+        "name": "shift",
+        "shortDesc": "removes the first item",
+        "desc":"The shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.",
+        "example": "arr.shift();<br>",
+        "output": "[1, 8]"
+      }
+
     ]
 }

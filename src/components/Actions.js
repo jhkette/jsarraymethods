@@ -31,7 +31,7 @@ class Actions extends Component {
             <option value="adding">Merge an array</option>
             <option value="adding">Access an array item/items</option>
             <option value="adding">Add an item/items</option>
-            <option value="adding">Delete an item/items</option>
+            <option value="deleting">Delete an item/items</option>
             <option value="adding">Other</option>
           </select>
         </form>

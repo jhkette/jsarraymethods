@@ -29,6 +29,7 @@ class Options extends Component {
   } else x =''
     const z = (
       <select id="slct" name="arrays" onChange={this.handleChange}>
+        <option value="">...</option>
         {x}
       </select>
     );
