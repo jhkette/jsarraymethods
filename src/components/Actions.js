@@ -26,8 +26,8 @@ class Actions extends Component {
           <label>What do you want to do?</label>
           <select className="actions" name="arrays" onChange={this.handleTypeChange}>
             <option value="">...</option>
-            <option value="adding">Iterate over an array</option>
-            <option value="adding">Find an item in an array</option>
+            <option value="iterate">Iterate over an array</option>
+            <option value="find">Find/check for an item</option>
             <option value="adding">Merge an array</option>
             <option value="adding">Access an array item/items</option>
             <option value="adding">Add an item/items</option>

@@ -64,11 +64,11 @@ border-bottom: 1px solid #c8c38f42;
   cursor: pointer;
 }
 .select-dropdown.action {
-  width: 26.5em;
+  display: inline-block;
 }
 
 .select-dropdown.method {
-  width: 29em;
+  display: inline-block;
 }
 .select-dropdown select {
   font-family: "helvetica neue", helvetica;

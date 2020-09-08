@@ -11,24 +11,23 @@ class ShowCode extends Component {
       this.props.fetchPosts(this.props.operation, this.props.methods);
     }
   }
-   createMarkup(){
-    return {__html: this.props.posts.example}
-
+  createMarkup() {
+    return { __html: this.props.posts.example };
   }
 
   render() {
-
-    
     let arr = [];
     if (this.props.methods && this.props.operation) {
       arr.push(this.props.posts.output);
     }
 
-    return this.props.posts.desc && this.props.posts.name ? (
+    return this.props.posts.desc && this.props.posts.name && this.props.operation ? (
       <div>
-        <div className="show-code" dangerouslySetInnerHTML={this.createMarkup()} />
-          
-       
+        <div
+          className="show-code"
+          dangerouslySetInnerHTML={this.createMarkup()}
+        />
+
         <div className="show-code">
           {this.props.posts.desc ? <Typical steps={arr} wrapper="p" /> : ""}
         </div>
@@ -42,7 +41,6 @@ class ShowCode extends Component {
 // dangerouslySetInnerHTML
 
 const mapStateToProps = (state) => {
- 
   return {
     posts: state.posts,
     methods: state.methods,

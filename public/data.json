@@ -58,5 +58,53 @@
         "output": "[1, 8]"
       }
 
+    ],
+    "iterate": [
+      {
+        "name": "map",
+        "shortDesc": "creates a new array from a function call",
+        "desc":"The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.",
+        "example": "arr.map();<br>",
+        "output": "[1, 8]"
+      },
+      {
+        "name": "forEach",
+        "shortDesc": "loop over the array",
+        "desc":"The forEach() method executes a provided function once for each array element.",
+        "example": "arr.forEach();<br>",
+        "output": "[1, 8]"
+      },
+      {
+        "name": "reduce",
+        "shortDesc": "reduce an array to a single value",
+        "desc":"The reduce() method executes a reducer function (that you provide) on each element of the array, resulting in single output value.",
+        "example": "arr.reduce();<br>",
+        "output": "[1, 8]"
+      }
+
+    ],
+    "find": [
+      {
+        "name": "find",
+        "shortDesc": "find an item in an array",
+        "desc":"The find() method returns the value of the first element in the provided array that satisfies the provided testing function.",
+        "example": "arr.find();<br>",
+        "output": "[1, 8]"
+      },
+      {
+        "name": "filter",
+        "shortDesc": "filter for a set of values",
+        "desc":" The filter() method creates an array filled with all array elements that pass a test (provided as a function)",
+        "example": "arr.filter();<br>",
+        "output": "[1, 8]"
+      },
+      {
+        "name": "reduce",
+        "shortDesc": "reduce an array to a single value",
+        "desc":"The reduce() method executes a reducer function (that you provide) on each element of the array, resulting in single output value.",
+        "example": "arr.reduce();<br>",
+        "output": "[1, 8]"
+      }
+
     ]
 }

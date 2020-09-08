@@ -11,11 +11,15 @@ export const fetchAllPosts = (ac) => async (dispatch) => {
 };
 
 export const fetchPosts = (data, method) => async (dispatch) => {
+  console.log(data + 'this is data')
+  
   const response = await getData();
   const x = response.data[data].filter(function (item) {
     return item.name === method;
   });
   dispatch({ type: "FETCH_POSTS", payload: x[0] });
+  
+    
 };
 
 export const selectMethod = (method) => {
