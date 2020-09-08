@@ -16,16 +16,24 @@ class Info extends Component {
       str.slice(1)
     );
   };
-  render() {
+
+  renderText(){
     return this.props.posts.desc &&
-      this.props.posts.name && this.props.operation ? (
-      <div className="info">
-        <h2>{this.jsUcfirst(this.props.posts.name)}</h2>
-        <p>{this.props.posts.desc}</p>
-      </div>
-    ) : (
-      ""
-    );
+    this.props.posts.name ? (
+    <div className="info">
+      <h2>{this.jsUcfirst(this.props.posts.name)}</h2>
+      <p>{this.props.posts.desc}</p>
+    </div>
+  ) : (
+    ""
+  );
+
+  }
+  render() {
+  
+    return this.props.posts ? this.renderText() : ''
+  
+   
   }
 }
 

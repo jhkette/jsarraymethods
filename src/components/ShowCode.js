@@ -15,12 +15,12 @@ class ShowCode extends Component {
     return { __html: this.props.posts.example };
   }
 
-  render() {
+  renderText(){
     let arr = [];
     if (this.props.methods && this.props.operation) {
       arr.push(this.props.posts.output);
     }
-
+   
     return this.props.posts.desc && this.props.posts.name && this.props.operation ? (
       <div>
         <div
@@ -35,8 +35,15 @@ class ShowCode extends Component {
     ) : (
       ""
     );
+
   }
-}
+
+  render() {
+    return this.props.posts ? this.renderText() : ''
+   
+    } 
+  }
+
 
 // dangerouslySetInnerHTML
 
