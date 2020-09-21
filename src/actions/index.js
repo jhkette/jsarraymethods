@@ -30,6 +30,7 @@ export const selectMethod = (method) => {
   return { type: "GET_METHOD", payload: method };
 };
 
+// call dispatch and set method to null here?
 export const selectOperation = (action) => {
   return { type: "GET_OPERATION", payload: action };
 };

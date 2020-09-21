@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { selectOperation, fetchAllPosts } from "../actions";
+import { selectOperation, fetchAllPosts, selectMethod } from "../actions";
 
 class Actions extends Component {
   constructor(props) {
@@ -13,8 +13,10 @@ class Actions extends Component {
   handleType(event) {
     event.preventDefault();
   }
+  // change to handle if no method is chosen - change to null
   handleTypeChange(event) {
     this.setState({ operation: event.target.value });
+    this.props.selectMethod('');
     this.props.selectOperation(event.target.value);
     this.props.fetchAllPosts(event.target.value);
   }
@@ -54,7 +56,7 @@ function mapStateToProps() {
 function mapDispatchToProps(dispatch) {
   // Whenever selectBook is called, the result shoudl be passed
   // to all of our reducers
-  return bindActionCreators({ selectOperation, fetchAllPosts }, dispatch);
+  return bindActionCreators({ selectOperation, fetchAllPosts, selectMethod }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Actions);
