@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import { bindActionCreators } from "redux";
-import { selectMethod, selectOperation} from "../actions";
+import { selectMethod, selectOperation } from "../actions";
 import { connect } from "react-redux";
-
 
 class Options extends Component {
   constructor(props) {
     super(props);
-    
+
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -16,33 +15,31 @@ class Options extends Component {
     event.preventDefault();
   }
   handleChange(event) {
-    
-    this.props.selectMethod(event.target.value );
+    this.props.selectMethod(event.target.value);
   }
 
   render() {
     let x;
-    if(this.props.allposts){
-     x = this.props.allposts.map((post) => {
-      return <option value={post.name}>{post.shortDesc}</option>;
-    });
-  } else x =''
+    if (this.props.allposts) {
+      x = this.props.allposts.map((post) => {
+        return <option value={post.name}>{post.shortDesc}</option>;
+      });
+    } else x = "";
     const z = (
       <select id="slct" name="arrays" onChange={this.handleChange}>
         <option value="">...</option>
         {x}
       </select>
     );
-    
+
     return (
       <div>
         {this.props.operation ? (
           <div className="select-dropdown method">
-          <form onSubmit={this.handleSubmit}>
-            <label>Do you need to?...</label>
-            {z}
-           
-          </form>
+            <form onSubmit={this.handleSubmit}>
+              <label>Do you need to</label>
+              {z}
+            </form>
           </div>
         ) : (
           ""

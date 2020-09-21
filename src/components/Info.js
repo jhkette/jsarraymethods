@@ -11,29 +11,21 @@ class Info extends Component {
   }
 
   jsUcfirst = (str) => {
-    return (
-      str.charAt(0).toUpperCase() +
-      str.slice(1)
-    );
+    return str.charAt(0).toUpperCase() + str.slice(1);
   };
 
-  renderText(){
-    return this.props.posts.desc &&
-    this.props.posts.name ? (
-    <div className="info">
-      <h2>{this.jsUcfirst(this.props.posts.name)}</h2>
-      <p>{this.props.posts.desc}</p>
-    </div>
-  ) : (
-    ""
-  );
-
+  renderText() {
+    return this.props.posts.desc && this.props.posts.name ? (
+      <div className="info">
+        <h2>{this.jsUcfirst(this.props.posts.name)}</h2>
+        <p>{this.props.posts.desc}</p>
+      </div>
+    ) : (
+      ""
+    );
   }
   render() {
-  
-    return this.props.posts ? this.renderText() : ''
-  
-   
+    return this.props.posts ? this.renderText() : "";
   }
 }
 

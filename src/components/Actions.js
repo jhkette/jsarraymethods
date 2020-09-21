@@ -21,10 +21,13 @@ class Actions extends Component {
   render() {
     return (
       <div className="select-dropdown action">
-  
         <form onSubmit={this.handleType}>
           <label>What do you want to do?</label>
-          <select className="actions" name="arrays" onChange={this.handleTypeChange}>
+          <select
+            className="actions"
+            name="arrays"
+            onChange={this.handleTypeChange}
+          >
             <option value="">...</option>
             <option value="iterate">Iterate over an array</option>
             <option value="find">Find/check for an item</option>
