@@ -6,7 +6,6 @@ import { selectOperation, fetchAllPosts, selectMethod } from "../actions";
 class Actions extends Component {
   constructor(props) {
     super(props);
-    this.state = { operation: "adding" };
     this.handleTypeChange = this.handleTypeChange.bind(this);
     this.handleType = this.handleType.bind(this);
   }
@@ -15,8 +14,7 @@ class Actions extends Component {
   }
   // change to handle if no method is chosen - change to null
   handleTypeChange(event) {
-    this.setState({ operation: event.target.value });
-    this.props.selectMethod('');
+    this.props.selectMethod("");
     this.props.selectOperation(event.target.value);
     this.props.fetchAllPosts(event.target.value);
   }
@@ -56,7 +54,10 @@ function mapStateToProps() {
 function mapDispatchToProps(dispatch) {
   // Whenever selectBook is called, the result shoudl be passed
   // to all of our reducers
-  return bindActionCreators({ selectOperation, fetchAllPosts, selectMethod }, dispatch);
+  return bindActionCreators(
+    { selectOperation, fetchAllPosts, selectMethod },
+    dispatch
+  );
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Actions);
