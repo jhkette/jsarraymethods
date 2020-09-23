@@ -135,8 +135,8 @@ h1,h2,h3,p{
 }
 
 .info {
-  min-width: 10rem;
-  max-width: 24rem;
+  width: 50%;
+  max-width: 22rem;
   max-height: 15rem;
   padding: .75rem;
   background-color: #56aceea6;
