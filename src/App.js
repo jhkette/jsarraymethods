@@ -22,6 +22,7 @@ class App extends Component {
             <ShowCode />
           </div>
         </div>
+        <footer></footer>
       </div>
     );
   }
