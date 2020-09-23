@@ -135,12 +135,12 @@ h1,h2,h3,p{
 }
 
 .info {
-  width: 50%;
-  max-width: 22rem;
+  width: 45%;
+  
   max-height: 15rem;
   padding: .75rem;
   background-color: #56aceea6;
-  margin: 0 3rem 2rem 0;
+  margin: 0 3rem 1.5rem 0;
   border-radius: 4px;
 }
 
