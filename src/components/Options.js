@@ -25,7 +25,7 @@ class Options extends Component {
       });
     } else x = "";
     const z = (
-      <select id="slct" name="arrays" onChange={this.handleChange}>
+      <select id="slct" name="arrays" onChange={this.handleChange} value={this.props.methods}>
         <option value="">...</option>
         {x}
       </select>

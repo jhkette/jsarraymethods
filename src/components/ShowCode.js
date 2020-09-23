@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import Typical from "react-typical";
+import Typist from "react-typist";
 import { fetchPosts } from "../actions";
 
 class ShowCode extends Component {
@@ -15,11 +15,7 @@ class ShowCode extends Component {
   }
 
   renderText() {
-    let arr = [];
-    if (this.props.methods && this.props.operation) {
-      arr.push(this.props.posts.output);
-    }
-
+   
     return this.props.posts && this.props.operation ? (
       <div>
         <div
@@ -28,7 +24,11 @@ class ShowCode extends Component {
         />
 
         <div className="show-code">
-          {this.props.posts.desc ? <Typical steps={arr} wrapper="p" /> : ""}
+          {this.props.posts.desc ? (
+            <Typist>{this.props.posts.output}</Typist>
+          ) : (
+            ""
+          )}
         </div>
       </div>
     ) : (
