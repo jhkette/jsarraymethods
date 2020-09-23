@@ -4,7 +4,7 @@ import Github from "../images/github.png";
 function Topbar() {
   return (
     <div className="topbar">
-      <a href="#">
+      <a href="https://github.com/jhkette/jsarraymethods">
         <img src={Github} alt="Logo" />
       </a>
     </div>

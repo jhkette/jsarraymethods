@@ -14,7 +14,7 @@ class Actions extends Component {
   }
   // change to handle if no method is chosen - change to null
   handleTypeChange(event) {
-    this.props.selectMethod("");
+    this.props.selectMethod('');
     this.props.selectOperation(event.target.value);
     this.props.fetchAllPosts(event.target.value);
   }

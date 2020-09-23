@@ -6,7 +6,6 @@ import { connect } from "react-redux";
 class Options extends Component {
   constructor(props) {
     super(props);
-
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }

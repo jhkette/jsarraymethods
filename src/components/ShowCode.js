@@ -7,7 +7,6 @@ class ShowCode extends Component {
   // runs every time state changes
   componentDidUpdate(prevProps) {
     if (prevProps.methods !== this.props.methods) {
-      console.log(this.props.operation, this.props.methods);
       this.props.fetchPosts(this.props.operation, this.props.methods);
     }
   }
@@ -15,13 +14,13 @@ class ShowCode extends Component {
     return { __html: this.props.posts.example };
   }
 
-  renderText(){
+  renderText() {
     let arr = [];
     if (this.props.methods && this.props.operation) {
       arr.push(this.props.posts.output);
     }
-   
-    return this.props.posts.desc && this.props.posts.name && this.props.operation ? (
+
+    return this.props.posts && this.props.operation ? (
       <div>
         <div
           className="show-code"
@@ -35,15 +34,12 @@ class ShowCode extends Component {
     ) : (
       ""
     );
-
   }
 
   render() {
-    return this.props.posts ? this.renderText() : ''
-   
-    } 
+    return this.props.posts ? this.renderText() : "";
   }
-
+}
 
 // dangerouslySetInnerHTML
 
