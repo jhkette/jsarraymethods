@@ -25,7 +25,7 @@ class ShowCode extends Component {
 
         <div className="show-code">
           {this.props.posts.desc ? (
-            <Typist>{this.props.posts.output}</Typist>
+            <Typist delay={1000}>{this.props.posts.output}</Typist>
           ) : (
             ""
           )}
