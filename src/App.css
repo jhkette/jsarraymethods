@@ -184,9 +184,10 @@ h1,h2,h3,p{
 
 .info h2 {
   display: inline-block;
-  border-bottom: 4px solid #1a1a1a;
+  border-bottom: 3px solid #1a1a1a;
   padding-right: 1rem;
   margin-bottom: 1.5rem;
+  font-size: 2rem;
   
 }
 
