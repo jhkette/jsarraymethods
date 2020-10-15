@@ -5,16 +5,16 @@
         "name": "splice",
         "shortDesc": " add element/s to an array",
         "desc": "The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.",
-        "example": "arr.splice(2, 0, 'tacos');<br>console.log(arr);",
-        "output": "[5, 1, 'tacos', 8]"
+        "example": "const months = ['Jan', 'March', 'April', 'June'];<br> months.splice(1, 0, 'Feb'); console.log(months);",
+        "output": "['Jan', 'Feb', 'March', 'April', 'June']"
       },
 
       {
         "name": "unshift",
         "shortDesc": "add elements to the beginning of an array",
         "desc":"The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.",
-        "example": "arr.unshift();<br>",
-        "output": "[1, 8]"
+        "example": "const array1 = [1, 2, 3];<br>array1.unshift(4, 5);<br>console.log(array1);",
+        "output": "[4, 5, 1, 2, 3]"
       }
       ,
 
@@ -22,8 +22,8 @@
         "name": "push",
         "shortDesc": "add elements to the end of an array",
         "desc":"The push() method adds one or more elements to the end of an array and returns the new length of the array..",
-        "example": "arr.push();<br>",
-        "output": "[1, 8]"
+        "example": "const animals = ['pigs', 'goats', 'sheep'];<br>animals.push('cows');<br>console.log(animals);",
+        "output": "['pigs', 'goats', 'sheep', 'cows']"
       },
       {
         "name": "concat",
