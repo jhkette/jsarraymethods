@@ -3,51 +3,59 @@ import React, { Component } from "react";
 class TypeWriter extends Component {
   constructor(props) {
     super(props)
+   
     this.state = {
       txt: "",
       wordIndex: 0,
       wait: parseInt(1000, 10),
       isDeleting: false,
     };
+    this.type()
   }
-  componentDidUpdate() {
-    // this.type();
-  }
+ 
   type() {
     // Current index of word
-    const current = this.wordIndex % this.words.length;
+    if(this.props.dataTxt){
     // Get full text of current word
-    const fullTxt = this.words;
-    if (this.isDeleting) {
+    const fullTxt = this.props.dataTxt
+    if (this.state.isDeleting) {
       // Remove char
-      this.txt = fullTxt.substring(0, this.txt.length - 1);
+      this.setState(prevState => {
+       return {txt: fullTxt.substring(0, prevState.txt.length - 1)}
+      });
     } else {
       // Add char
-      this.txt = fullTxt.substring(0, this.txt.length + 1);
+      this.setState(prevState => {
+       return {txt: fullTxt.substring(0, prevState.txt.length + 1)}
+      });
     }
-    let typeSpeed = 300;
-    if (this.isDeleting) {
+    let typeSpeed = 100;
+    if (this.state.isDeleting) {
       typeSpeed /= 2;
     }
     // If word is complete
-    if (!this.isDeleting && this.txt === fullTxt) {
+    if (!this.state.isDeleting && this.state.txt === fullTxt) {
       // Make pause at end
-      typeSpeed = this.wait;
+      typeSpeed = this.state.wait;
       // Set delete to true
-      this.isDeleting = true;
-    } else if (this.isDeleting && this.txt === "") {
-      this.isDeleting = false;
+      this.setState({isDeleting: true})
+    } else if (this.state.isDeleting && this.state.txt === "") {
+      this.setState({isDeleting: false})
       // Move to next word
-      this.wordIndex++;
+      this.setState(prevState => {
+        return {wordIndex: prevState.wordIndex +1 }
+      })
       // Pause before start typing
       typeSpeed = 500;
     }
     setTimeout(() => this.type(), typeSpeed);
+   }
   }
   render(){
-   console.log(this.props.dataTxt)
+    
+   console.log(this.state.txt)
    return (
-    <span>{this.props.dataTxt}</span>
+    <span>{this.state.txt}</span>
    )
   }
 }
