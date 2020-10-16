@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import Typer from './Typewriter'
+import Typer from './Type2'
 
 import { fetchPosts } from "../actions";
 
@@ -21,7 +21,7 @@ class ShowCode extends Component {
   renderText() {
     // console.log(this.props.posts.output)
 
-    return this.props.posts.output && this.props.operation ? (
+    return this.props.posts && this.props.operation ? (
       <div>
         <div
           className="show-code"
@@ -29,7 +29,7 @@ class ShowCode extends Component {
         />
 
         <div className="show-code">
-          <Typer heading={'Things I want to type:'} dataText={[...this.props.posts.output]} />
+          <Typer dataTxt={this.props.posts.output} />
         </div>
       </div>
     ) : (

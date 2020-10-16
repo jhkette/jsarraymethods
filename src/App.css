@@ -55,6 +55,7 @@ p {
 
 .container {
   width: 100%;
+  min-height: 100vh;
 }
 
 .topbar {
@@ -79,7 +80,7 @@ p {
 .App {
   width: 80%;
   margin: 2rem auto;
-  /* min-height: 75vh; */
+  min-height: 75vh;
 }
 
 .App h1 {
