@@ -23,10 +23,10 @@ class TypeWriter extends Component {
   async type() {
     // Current index of word
     if (this.props.dataTxt) {
-      if (this.state.complete == "") {
+      if (this.state.complete === "") {
         await this.timeout(300)
         this.setState({ complete: this.props.dataTxt });
-      } else if (this.state.complete != this.props.dataTxt) {
+      } else if (this.state.complete !== this.props.dataTxt) {
         this.setState({ isDeleting: true });
         if (this.state.txt === "") {
           this.setState({ complete: this.props.dataTxt });
