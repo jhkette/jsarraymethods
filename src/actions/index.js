@@ -1,5 +1,6 @@
 import { getData } from "../data/data";
 
+
 export const fetchAllPosts = (ac) => async (dispatch) => {
   if (ac !== "") {
     const response = await getData();

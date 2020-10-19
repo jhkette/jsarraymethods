@@ -91,6 +91,7 @@ p {
 }
 
 .show-code {
+  min-height: 70px;
   background-color: #050505;
   font-size: 1.25rem;
   color: #4ba84b;
@@ -101,6 +102,10 @@ p {
   margin: 0 0 1.5rem 0;
   border-radius: 4px;
 }
+ .txt {
+  border-right: 0.2rem solid #777;
+}
+
 
 .results-container {
   width: 100%;

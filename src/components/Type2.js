@@ -5,23 +5,37 @@ class TypeWriter extends Component {
     super(props);
 
     this.state = {
+      complete: "",
       txt: "",
       wordIndex: 0,
       wait: parseInt(1000, 10),
-      isDeleting: false,
     };
-    this.type();
-  }
-  componentDidUpdate() {
-    // if (prevProps.methods !== this.props.methods) {
-    // }
   }
 
-  type() {
+  componentDidMount() {
+    this.type();
+  }
+
+  timeout(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+
+  async type() {
     // Current index of word
     if (this.props.dataTxt) {
+      if (this.state.complete == "") {
+        await this.timeout(300)
+        this.setState({ complete: this.props.dataTxt });
+      } else if (this.state.complete != this.props.dataTxt) {
+        this.setState({ isDeleting: true });
+        if (this.state.txt === "") {
+          this.setState({ complete: this.props.dataTxt });
+          this.setState({ isDeleting: false });
+        }
+      }
+
       // Get full text of current word
-      const fullTxt = this.props.dataTxt;
+      const fullTxt = this.state.complete;
       if (this.state.isDeleting) {
         // Remove char
         this.setState((prevState) => {
@@ -33,31 +47,16 @@ class TypeWriter extends Component {
           return { txt: fullTxt.substring(0, prevState.txt.length + 1) };
         });
       }
-      let typeSpeed = 250;
+      let typeSpeed = 100;
       if (this.state.isDeleting) {
         typeSpeed /= 2;
       }
-      // If word is complete
-      if (!this.state.isDeleting && this.state.txt === fullTxt) {
-        // Make pause at end
-        typeSpeed = this.state.wait;
-        // Set delete to true
-        // this.setState({ isDeleting: true });
-      } else if (this.state.isDeleting && this.state.txt === "") {
-        this.setState({ isDeleting: false });
-        // Move to next word
-        this.setState((prevState) => {
-          return { wordIndex: prevState.wordIndex + 1 };
-        });
-        // Pause before start typing
-        typeSpeed = 500;
-      }
+
       setTimeout(() => this.type(), typeSpeed);
     }
   }
   render() {
-    console.log(this.state.txt);
-    return <span>{this.state.txt}</span>;
+    return <span className="txt">{this.state.txt}</span>;
   }
 }
 
