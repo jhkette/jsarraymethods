@@ -49,14 +49,14 @@ class TypeWriter extends Component {
       }
       let typeSpeed = 100;
       if (this.state.isDeleting) {
-        typeSpeed /= 2;
+        typeSpeed /= 3;
       }
 
       setTimeout(() => this.type(), typeSpeed);
     }
   }
   render() {
-    return <span className="txt">{this.state.txt}</span>;
+    return <span className="txt">{this.state.txt}<div id="cursor"></div></span>;
   }
 }
 

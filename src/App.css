@@ -69,8 +69,9 @@ p {
 
 .topbar img {
   height: 2rem;
-
   transition: 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  margin-top: .3rem;
+
 }
 
 .topbar a {
@@ -103,8 +104,39 @@ p {
   border-radius: 4px;
 }
  .txt {
-  border-right: 0.2rem solid #777;
+ 
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
 }
+
+#cursor {
+  background: lime;
+  line-height: 18px;
+  margin-left: 3px;
+  margin-top: 3px;
+  -webkit-animation: blink 0.8s infinite;
+  animation: blink 0.8s infinite;
+  width: 7px;
+  height: 22px;
+}
+
+@-webkit-keyframes blink {
+  0% {background: #222}
+  50% {background: lime}
+  100% {background: #222}
+}
+
+
+@keyframes blink {
+  0% {background: #222}
+  50% {background: lime}
+  100% {background: #222}
+}
+
+
+
 
 
 .results-container {
