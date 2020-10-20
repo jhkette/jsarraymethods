@@ -23,11 +23,12 @@ class ShowCode extends Component {
 
     return this.props.posts && this.props.operation ? (
       <div>
+        <h3>Example</h3>
         <div
           className="show-code"
           dangerouslySetInnerHTML={this.createMarkup()}
         />
-
+        <h3>Output</h3>
         <div className="show-code">
           <Typer dataTxt={this.props.posts.output} />
         </div>
