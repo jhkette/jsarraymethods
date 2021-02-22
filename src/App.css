@@ -19,10 +19,10 @@ body {
 }
 
 p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 label {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 body {
@@ -54,7 +54,8 @@ p {
 }
 
 h3{
-  font-size: 1.45rem;
+  font-size: 1.3rem;
+  margin-bottom: .5rem;
 }
 
 .container {
@@ -65,14 +66,14 @@ h3{
 .topbar {
   width: 100%;
   height: 3.5rem;
-  background-color: #24292e;
+  background-color: #1b1c1d;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
 .topbar img {
-  height: 2rem;
+  height: 1.8rem;
   transition: 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   margin-top: .3rem;
 
@@ -85,14 +86,14 @@ h3{
 .App {
   width: 80%;
   margin: 2rem auto;
-  min-height: 75vh;
+  min-height: 85vh;
 }
 
 .App h1 {
   font-family: "Source San Pro", sans-serif;
-  margin-top: 4rem;
+  margin-top: 2rem;
   margin-bottom: 1rem;
-  font-size: 3rem;
+  font-size: 2.8rem;
 }
 
 .show-code {
@@ -212,7 +213,7 @@ h3{
 
 .info {
   width: 45%;
-  padding: 1.75rem;
+  padding: 3rem;
   background-color: #56aceea6;
   margin: 0 0.5rem 1.5rem 0;
   border-radius: 4px;
@@ -223,7 +224,6 @@ h3{
 
 .info h2 {
   display: inline-block;
-  border-bottom: 3px solid #1a1a1a;
   padding-right: 1rem;
   margin-bottom: 1.5rem;
   font-size: 2rem;

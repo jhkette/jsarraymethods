@@ -43,16 +43,12 @@ class Actions extends Component {
   }
 }
 
-function mapStateToProps() {
-  return {
-    selectOperation,
-  };
-}
+
 
 // Anything returned from this function will end up as props
-// on the BookList container
 function mapDispatchToProps(dispatch) {
-  // Whenever selectBook is called, the result shoudl be passed
+  // Whenever selectOperation, fetchAllPosts, selectMethod 
+  // is called, the result shoudl be passed
   // to all of our reducers
   return bindActionCreators(
     { selectOperation, fetchAllPosts, selectMethod },
@@ -60,4 +56,5 @@ function mapDispatchToProps(dispatch) {
   );
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Actions);
+// null is where mapStateToProps would be as a parameter - we do not need this though
+export default connect(null, mapDispatchToProps)(Actions);

@@ -19,25 +19,29 @@ class Options extends Component {
 
   render() {
     let x;
+    // render allposts as select form options
     if (this.props.allposts) {
       x = this.props.allposts.map((post) => {
         return <option value={post.name}>{post.shortDesc}</option>;
       });
     } else x = "";
-    const z = (
-      <select id="slct" name="arrays" onChange={this.handleChange} value={this.props.methods}>
-        <option value="">...</option>
-        {x}
-      </select>
-    );
 
     return (
       <div>
+    {/* only render if this.operation */}
         {this.props.operation ? (
           <div className="select-dropdown method">
             <form onSubmit={this.handleSubmit}>
               <label>Do you need to</label>
-              {z}
+              <select
+                id="slct"
+                name="arrays"
+                onChange={this.handleChange}
+                value={this.props.methods}
+              >
+                <option value="">...</option>
+                {x}
+              </select>
             </form>
           </div>
         ) : (

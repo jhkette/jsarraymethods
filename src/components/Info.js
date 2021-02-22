@@ -14,9 +14,9 @@ class Info extends Component {
   };
 
   renderText() {
+    // we need to check for props here otherwise return empty string
     return this.props.posts.desc &&
-      this.props.posts.name &&
-      this.props.operation ? (
+      this.props.posts.name ? (
       <div className="info">
         <h2>{this.jsUcfirst(this.props.posts.name)}</h2>
         <p>{this.props.posts.desc}</p>
