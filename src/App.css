@@ -73,8 +73,7 @@ h3{
 }
 
 .topbar img {
-  height: 1.8rem;
-  transition: 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  height: 1.95rem;
   margin-top: .3rem;
 
 }
@@ -85,28 +84,33 @@ h3{
 
 .App {
   width: 80%;
-  margin: 2rem auto;
+  margin: 1rem auto;
   min-height: 85vh;
 }
 
 .App h1 {
-  font-family: "Source San Pro", sans-serif;
+  font-family: 'Merriweather', serif;
   margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+  display: inline-block;
+  background-color: #2b2b2b;
+  color: white;
+  padding: 2px 12px;
 }
 
 .show-code {
   min-height: 70px;
-  background-color: #050505;
-  font-size: 1.25rem;
-  color: #4ba84b;
+  background-color: #2b2b2b;
+  color: #aeded4;
+  font-size: 1.1rem;
   font-weight: 500;
   font-family: "Source Code Pro", monospace;
   padding: 1em;
   width: 33rem;
   margin: 0 0 1.5rem 0;
   border-radius: 4px;
+  border: 2px solid #abddd3;
 }
  .txt {
  
@@ -117,7 +121,7 @@ h3{
 }
 
 #cursor {
-  background: #4ba84b;
+  background: #aeded4;
   line-height: 18px;
   margin-left: 3px;
   margin-top: 3px;
@@ -129,14 +133,14 @@ h3{
 
 @-webkit-keyframes blink {
   0% {background: #222}
-  50% {background: lime}
+  50% {background: #aeded4}
   100% {background: #222}
 }
 
 
 @keyframes blink {
   0% {background: #222}
-  50% {background: lime}
+  50% {background: #aeded4}
   100% {background: #222}
 }
 
@@ -213,13 +217,14 @@ h3{
 
 .info {
   width: 45%;
-  padding: 3rem;
+  padding: 2rem;
   background-color: #56aceea6;
   margin: 0 0.5rem 1.5rem 0;
   border-radius: 4px;
   height: -moz-fit-content;
   height: fit-content;
   height: -webkit-fit-content;
+  border: 1px solid #0d7bcf9c;
 }
 
 .info h2 {
