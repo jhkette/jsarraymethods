@@ -35,6 +35,8 @@ class Actions extends Component {
             <option value="concatenate">Concatenate an array</option>
             <option value="adding">Add an item/items</option>
             <option value="deleting">Delete an item/items</option>
+            <option value="ordering">Order array items</option>
+            <option value="string">Functions relating to strings</option>
             <option value="other">Other</option>
           </select>
         </form>

@@ -23,6 +23,22 @@
       "output": "['pigs', 'goats', 'sheep', '🐈']"
     }
   ],
+  "string": [
+    {
+      "name": "join",
+      "shortDesc": "join all elements of the array into a string",
+      "desc": "Joins all elements of an array into a string",
+      "example": "const elements = ['Fire', 'Air', 'Water'];<br>console.log(elements.join());<br>console.log(elements.join('-'));",
+      "output": "Fire,Air,Water Fire-Air-Water"
+    },
+    {
+      "name": "toString",
+      "shortDesc": "return a string representing the array.",
+      "desc": "Returns a string representing the array and its elements.",
+      "example": "const array1 = [1, 2, 'a', '1a'];<br>console.log(array1.toString());",
+      "output": "1,2,a,1a"
+    }
+  ],
   "deleting": [
     {
       "name": "pop",
@@ -40,7 +56,7 @@
     },
     {
       "name": "shift",
-      "shortDesc": "removes the first item",
+      "shortDesc": "remove the first item",
       "desc": "The shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.",
       "example": "const array1 = [1, 2, 3];<br>const firstElement = array1.shift();<br>console.log(firstElement);",
       "output": "1"
@@ -139,6 +155,22 @@
       "desc": "The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.",
       "example": "const array1 = ['a', 'b', 'c'];<br>const array2 = ['d', 'e', 'f'];<br>const array3 = array1.concat(array2);<br>console.log(array3);",
       "output": "['a', 'b', 'c', 'd', 'e', 'f']"
+    }
+  ],
+  "ordering": [
+    {
+      "name": "reverse",
+      "shortDesc": "reverse the order of the array",
+      "desc": "Reverses the order of the elements of an array in place — the first becomes the last, and the last becomes the first.',example: `arr.reverse();<br>console.log(arr);",
+      "example": "const array1 = ['one', 'two', 'three']<br>const reversed = array1.reverse();<br>console.log(array1);",
+      "output": "['three', 'two', 'one']"
+    },
+    {
+      "name": "sort",
+      "shortDesc": "sort the items of the array",
+      "desc": "Sorts the elements of an array in place and returns the array.Important note: If compareFunction is not supplied, elements are sorted by converting them to strings and comparing strings in Unicode code point order. For example, 'Banana' comes before 'cherry'. In a numeric sort, 9 comes before 80, but because numbers are converted to strings, '80' comes before '9' in Unicode order. The docs have more information to clarify.",
+      "example": "let numbers = [4, 2, 5, 1, 3];<br>numbers.sort((a, b) => a - b);<br>console.log(numbers);;",
+      "output": "[1, 2, 3, 4, 5]"
     }
   ],
   "other": [
