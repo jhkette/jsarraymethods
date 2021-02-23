@@ -19,8 +19,8 @@
       "name": "push",
       "shortDesc": "add elements to the end of an array",
       "desc": "The push() method adds one or more elements to the end of an array and returns the new length of the array..",
-      "example": "const animals = ['pigs', 'goats', 'sheep'];<br>animals.push('cows');<br>console.log(animals);",
-      "output": "['pigs', 'goats', 'sheep', 'cows']"
+      "example": "const animals = ['pigs', 'goats', 'sheep'];<br>animals.push('🐈');<br>console.log(animals);",
+      "output": "['pigs', 'goats', 'sheep', '🐈']"
     }
   ],
   "deleting": [
@@ -76,7 +76,7 @@
       "output": "54321"
     }
   ],
-  "find": [
+  "findone": [
     {
       "name": "find",
       "shortDesc": "Find an item in an array",
@@ -84,13 +84,7 @@
       "example": "const array1 = [5, 12, 8, 130, 44];<br>const found = array1.find(element => element > 10);<br>console.log(found);",
       "output": "12"
     },
-    {
-      "name": "filter",
-      "shortDesc": "Filter for a set of values",
-      "desc": "The filter() method creates a new array with all elements that pass the test implemented by the provided function.",
-      "example": "const words = ['limit', 'elite', 'exuberant', 'destruction', 'present'];<br>const result = words.filter(word => word.length > 6);<br>console.log(result);",
-      "output": "['exuberant', 'destruction', 'present']"
-    },
+
     {
       "name": "findIndex",
       "shortDesc": "Find the index of an item",
@@ -106,6 +100,31 @@
       "output": "3"
     }
   ],
+  "findmany": [
+    {
+      "name": "filter",
+      "shortDesc": "Filter for a set of values",
+      "desc": "The filter() method creates a new array with all elements that pass the test implemented by the provided function.",
+      "example": "const words = ['limit', 'elite', 'exuberant', 'destruction', 'present'];<br>const result = words.filter(word => word.length > 6);<br>console.log(result);",
+      "output": "['exuberant', 'destruction', 'present']"
+    },
+
+    {
+      "name": "every",
+      "shortDesc": "Find out if every item satisfies a condition",
+      "desc": "Returns true if every element in this array satisfies the provided testing function.",
+      "example": "let isSmall = (el) => el < 10;<br> console.log(arr.every(isSmall));",
+      "output": "true"
+    },
+    {
+      "name": "some",
+      "shortDesc": "Find out if at least one item satisfies a condition",
+      "desc": "Returns true if at least one element in this array satisfies the provided testing function.",
+      "example": "let biggerThan4 = (el) => el > 4;<br>console.log(arr.some(biggerThan4));",
+      "output": "true"
+    }
+  ],
+
   "concatenate": [
     {
       "name": "spread",
@@ -120,6 +139,29 @@
       "desc": "The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.",
       "example": "const array1 = ['a', 'b', 'c'];<br>const array2 = ['d', 'e', 'f'];<br>const array3 = array1.concat(array2);<br>console.log(array3);",
       "output": "['a', 'b', 'c', 'd', 'e', 'f']"
+    }
+  ],
+  "other": [
+    {
+      "name": "length",
+      "shortDesc": "Find the length of the array",
+      "desc": "Returns the number of elements in that array",
+      "example": "const clothing = ['shoes', 'shirts', 'socks', 'sweaters'];<br>console.log(clothing.length);",
+      "output": "4"
+    },
+    {
+      "name": "fill",
+      "shortDesc": "Fill all the elements of the array with a value",
+      "desc": "Fills all the elements of an array from a start index to an end index with a static value.",
+      "example": "const array1 = [1, 2, 3, 4];<br>console.log(array1.fill(0, 2, 4));",
+      "output": "[1, 2, 0, 0]"
+    },
+    {
+      "name": "copyWithin",
+      "shortDesc": "Copy a sequence of array elements within the array",
+      "desc": "Copies a sequence of array elements within the array. The syntax is array.copyWithin(target, start, end).",
+      "example": "var fruits = ['Banana', 'Orange', 'Apple', 'Mango'];<br>fruits.copyWithin(2, 0);",
+      "output": "['Banana', 'Orange','Banana', 'Orange' ]"
     }
   ]
 }
