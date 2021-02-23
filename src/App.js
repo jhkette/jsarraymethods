@@ -13,8 +13,8 @@ class App extends Component {
         <TopBar />
         <div className="App">
           <h1>Array Method Tool</h1>
-          <p>Array methods explorer. Somewhat inspired by another site made in
-            Vue.</p>
+          <p className="intro">An array methods explorer made using React. Somewhat inspired by another site made in
+            Vue. </p>
           <Actions />
           <Options />
           <div className="results-container">
@@ -22,7 +22,7 @@ class App extends Component {
             <ShowCode />
           </div>
         </div>
-        <footer></footer>
+        <footer />
       </div>
     );
   }
