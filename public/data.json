@@ -1,110 +1,125 @@
 {
-   
-    "adding": [
-      {
-        "name": "splice",
-        "shortDesc": " add element/s to an array",
-        "desc": "The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.",
-        "example": "const months = ['Jan', 'March', 'April', 'June'];<br> months.splice(1, 0, 'Feb'); console.log(months);",
-        "output": "['Jan', 'Feb', 'March', 'April', 'June']"
-      },
+  "adding": [
+    {
+      "name": "splice",
+      "shortDesc": " add element/s to an array",
+      "desc": "The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.",
+      "example": "const months = ['Jan', 'March', 'April', 'June'];<br> months.splice(1, 0, 'Feb'); console.log(months);",
+      "output": "['Jan', 'Feb', 'March', 'April', 'June']"
+    },
 
-      {
-        "name": "unshift",
-        "shortDesc": "add elements to the beginning of an array",
-        "desc":"The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.",
-        "example": "const array1 = [1, 2, 3];<br>array1.unshift(4, 5);<br>console.log(array1);",
-        "output": "[4, 5, 1, 2, 3]"
-      }
-      ,
-
-      {
-        "name": "push",
-        "shortDesc": "add elements to the end of an array",
-        "desc":"The push() method adds one or more elements to the end of an array and returns the new length of the array..",
-        "example": "const animals = ['pigs', 'goats', 'sheep'];<br>animals.push('cows');<br>console.log(animals);",
-        "output": "['pigs', 'goats', 'sheep', 'cows']"
-      },
-      {
-        "name": "concat",
-        "shortDesc": "add an array to another array",
-        "desc":"The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.",
-        "example": "arr.concat();<br>",
-        "output": "[1, 8]"
-      }
-     
-     
-    ],
-    "deleting": [
-      {
-        "name": "pop",
-        "shortDesc": "delete the last item",
-        "desc":"The pop() method removes the last element from an array and returns that element. This method changes the length of the array.",
-        "example": "arr.pop();<br>",
-        "output": "[1, 8]"
-      },
-      {
-        "name": "slice",
-        "shortDesc": "remove several items",
-        "desc":"The slice() method returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included) where start and end represent the index of items in that array.",
-        "example": "arr.slice();<br>",
-        "output": "[1, 8]"
-      },
-      {
-        "name": "shift",
-        "shortDesc": "removes the first item",
-        "desc":"The shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.",
-        "example": "arr.shift();<br>",
-        "output": "[1, 8]"
-      }
-
-    ],
-    "iterate": [
-      {
-        "name": "map",
-        "shortDesc": "creates a new array from a function call",
-        "desc":"The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.",
-        "example": "arr.map();<br>",
-        "output": "[1, 8]"
-      },
-      {
-        "name": "forEach",
-        "shortDesc": "loop over the array",
-        "desc":"The forEach() method executes a provided function once for each array element.",
-        "example": "arr.forEach();<br>",
-        "output": "[1, 8]"
-      },
-      {
-        "name": "reduce",
-        "shortDesc": "reduce an array to a single value",
-        "desc":"The reduce() method executes a reducer function (that you provide) on each element of the array, resulting in single output value.",
-        "example": "arr.reduce();<br>",
-        "output": "[1, 8]"
-      }
-
-    ],
-    "find": [
-      {
-        "name": "find",
-        "shortDesc": "find an item in an array",
-        "desc":"The find() method returns the value of the first element in the provided array that satisfies the provided testing function.",
-        "example": "arr.find();<br>",
-        "output": "[1, 8]"
-      },
-      {
-        "name": "filter",
-        "shortDesc": "filter for a set of values",
-        "desc":" The filter() method creates an array filled with all array elements that pass a test (provided as a function)",
-        "example": "arr.filter();<br>",
-        "output": "[1, 8]"
-      },
-      {
-        "name": "reduce",
-        "shortDesc": "reduce an array to a single value",
-        "desc":"The reduce() method executes a reducer function (that you provide) on each element of the array, resulting in single output value.",
-        "example": "arr.reduce();<br>",
-        "output": "[1, 8]"
-      }
-
-    ]
+    {
+      "name": "unshift",
+      "shortDesc": "add elements to the beginning of an array",
+      "desc": "The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.",
+      "example": "const array1 = [1, 2, 3];<br>array1.unshift(4, 5);<br>console.log(array1);",
+      "output": "[4, 5, 1, 2, 3]"
+    },
+    {
+      "name": "push",
+      "shortDesc": "add elements to the end of an array",
+      "desc": "The push() method adds one or more elements to the end of an array and returns the new length of the array..",
+      "example": "const animals = ['pigs', 'goats', 'sheep'];<br>animals.push('cows');<br>console.log(animals);",
+      "output": "['pigs', 'goats', 'sheep', 'cows']"
+    }
+  ],
+  "deleting": [
+    {
+      "name": "pop",
+      "shortDesc": "delete the last item",
+      "desc": "The pop() method removes the last element from an array and returns that element. This method changes the length of the array.",
+      "example": "const plants = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato'];<br>console.log(plants.pop());",
+      "output": "'tomato'"
+    },
+    {
+      "name": "slice",
+      "shortDesc": "remove several items",
+      "desc": "The slice() method returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included) where start and end represent the index of items in that array.",
+      "example": "const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];<br>console.log(animals.slice(2, 4));",
+      "output": "['camel', 'duck']"
+    },
+    {
+      "name": "shift",
+      "shortDesc": "removes the first item",
+      "desc": "The shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.",
+      "example": "const array1 = [1, 2, 3];<br>const firstElement = array1.shift();<br>console.log(firstElement);",
+      "output": "1"
+    }
+  ],
+  "iterate": [
+    {
+      "name": "map",
+      "shortDesc": "Creates a new array from a function call",
+      "desc": "The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.",
+      "example": "const array1 = [1, 4, 9, 16];<br>const map1 = array1.map(x => x * 2);<br>console.log(map1);",
+      "output": "[2, 8, 18, 32]"
+    },
+    {
+      "name": "forEach",
+      "shortDesc": "Loop over the array",
+      "desc": "The forEach() method executes a provided function once for each array element.",
+      "example": "const array1 = ['a', 'b', 'c'];<br>array1.forEach(element => console.log(element))",
+      "output": "'a' 'b' 'c'"
+    },
+    {
+      "name": "reduce",
+      "shortDesc": "Reduce an array to a single value",
+      "desc": "The reduce() method executes a reducer function (that you provide) on each element of the array, resulting in single output value.",
+      "example": "const euros = [29.76, 41.85, 46.5]; <br> const sum = euros.reduce((total, amount) => total + amount);",
+      "output": "118.11"
+    },
+    {
+      "name": "reduceRight",
+      "shortDesc": "Reduce an array to a value, in reverse",
+      "desc": "Apply a function against an accumulator and each value of the array (from right-to-left) as to reduce it to a single value.",
+      "example": "const arr = ['1', '2', '3', '4', '5'];<br> total1 = arr.reduceRight((prev, cur) => prev + cur)<br>console.log(total1);",
+      "output": "54321"
+    }
+  ],
+  "find": [
+    {
+      "name": "find",
+      "shortDesc": "Find an item in an array",
+      "desc": "The find() method returns the value of the first element in the provided array that satisfies the provided testing function.  If no values satisfy the testing function, undefined is returned.",
+      "example": "const array1 = [5, 12, 8, 130, 44];<br>const found = array1.find(element => element > 10);<br>console.log(found);",
+      "output": "12"
+    },
+    {
+      "name": "filter",
+      "shortDesc": "Filter for a set of values",
+      "desc": "The filter() method creates a new array with all elements that pass the test implemented by the provided function.",
+      "example": "const words = ['limit', 'elite', 'exuberant', 'destruction', 'present'];<br>const result = words.filter(word => word.length > 6);<br>console.log(result);",
+      "output": "['exuberant', 'destruction', 'present']"
+    },
+    {
+      "name": "findIndex",
+      "shortDesc": "Find the index of an item",
+      "desc": "The findIndex() method returns the index of the first element in the array that satisfies the provided testing function.",
+      "example": "const array1 = [5, 12, 8, 130, 44];<br>const isLargeNumber = (element) => element > 13;<br>console.log(array1.findIndex(isLargeNumber));",
+      "output": "3"
+    },
+    {
+      "name": "lastIndexOf",
+      "shortDesc": "Find the last index of an item",
+      "desc": "Returns the last (greatest) index of an element within the array equal to the specified value, or -1 if none is found.",
+      "example": "const animals = ['Dodo', 'Tiger', 'Penguin', 'Dodo'];<br>console.log(animals.lastIndexOf('Dodo'));",
+      "output": "3"
+    }
+  ],
+  "concatenate": [
+    {
+      "name": "spread",
+      "shortDesc": "spread an array into another array",
+      "desc": "The find() method returns the value of the first element in the provided array that satisfies the provided testing function.  If no values satisfy the testing function, undefined is returned.",
+      "example": "const myArray = [`🤪`,`🐻`,`🎌`]<br>const yourArray = [`🙂`,`🤗`,`🤩`]<br>const ourArray = [...myArray,...yourArray]<br>console.log(ourArray)",
+      "output": "[ '🤪', '🐻', '🎌', '🙂', '🤗', '🤩' ]"
+    },
+    {
+      "name": "concat",
+      "shortDesc": "add an array to another array",
+      "desc": "The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.",
+      "example": "const array1 = ['a', 'b', 'c'];<br>const array2 = ['d', 'e', 'f'];<br>const array3 = array1.concat(array2);<br>console.log(array3);",
+      "output": "['a', 'b', 'c', 'd', 'e', 'f']"
+    }
+  ]
 }

@@ -31,7 +31,7 @@ class Actions extends Component {
             <option value="">...</option>
             <option value="iterate">Iterate over an array</option>
             <option value="find">Find/check for an item</option>
-            <option value="adding">Merge an array</option>
+            <option value="concatenate">Concatenate an array</option>
             <option value="adding">Access an array item/items</option>
             <option value="adding">Add an item/items</option>
             <option value="deleting">Delete an item/items</option>

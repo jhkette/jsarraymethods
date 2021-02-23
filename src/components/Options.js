@@ -17,18 +17,18 @@ class Options extends Component {
     this.props.selectMethod(event.target.value);
   }
 
-  render() {
-    let x;
-    // render allposts as select form options
+  renderText() {
     if (this.props.allposts) {
-      x = this.props.allposts.map((post) => {
+      return this.props.allposts.map((post) => {
         return <option value={post.name}>{post.shortDesc}</option>;
       });
-    } else x = "";
+    }
+  }
 
+  render() {
     return (
       <div>
-    {/* only render if this.operation */}
+        {/* only render if this.operation */}
         {this.props.operation ? (
           <div className="select-dropdown method">
             <form onSubmit={this.handleSubmit}>
@@ -40,7 +40,7 @@ class Options extends Component {
                 value={this.props.methods}
               >
                 <option value="">...</option>
-                {x}
+                {this.renderText()}
               </select>
             </form>
           </div>
@@ -62,7 +62,7 @@ const mapStateToProps = (state) => {
 };
 
 // Anything returned from this function will end up as props
-// on the BookList container
+
 function mapDispatchToProps(dispatch) {
   // Whenever selectBook is called, the result shoudl be passed
   // to all of our reducers
