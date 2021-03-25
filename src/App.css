@@ -58,14 +58,29 @@ h3{
   margin-bottom: .5rem;
 }
 
-.container {
+html, body {
+ 
   width: 100%;
+  height: 100%;
+}
+body{
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.container {
+  min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+   
 }
 
 .topbar {
   width: 100%;
-  height: 2.5rem;
+  height: 3rem;
   background-color: #1b1c1d;
   display: flex;
   justify-content: flex-end;
@@ -73,7 +88,7 @@ h3{
 }
 
 .topbar img {
-  height: 1.55rem;
+  height: 1.85rem;
   margin-top: .3rem;
 
 }
@@ -84,8 +99,9 @@ h3{
 
 .App {
   width: 80%;
-  margin: 1rem auto;
-  min-height: 90vh;
+  margin: auto;
+  padding-top: 1.5rem;
+  flex-grow: 1;
 }
 
 .App h1 {
@@ -241,6 +257,10 @@ h3{
 }
 
 footer {
-  height: 12rem;
+ 
   background-color: #e6e6e6;
+  flex-shrink: 0;
+  margin-top: auto;
+  height: 3rem;
+
 }

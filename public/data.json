@@ -12,8 +12,8 @@
       "name": "unshift",
       "shortDesc": "add elements to the beginning of an array",
       "desc": "The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.",
-      "example": "const array1 = [1, 2, 3];<br>array1.unshift(4, 5);<br>console.log(array1);",
-      "output": "[4, 5, 1, 2, 3]"
+      "example": "const array1 = [1, 2, 3];<br>array1.unshift(😍, 5);<br>console.log(array1);",
+      "output": "[😍, 5, 1, 2, 3]"
     },
     {
       "name": "push",
